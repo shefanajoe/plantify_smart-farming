@@ -1,0 +1,71 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #19281f; /* Light greenish background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #3d4e3b; /* Darker, earthy text color */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow effect */
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 26px; /* Slightly larger font size for headings */
+    margin-bottom: 15px;
+    color: #4a7742; /* Dark green for headings */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0; /* Initial opacity for fade effect */
+    animation: fadeIn 2s forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Final opacity */
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded button */
+    transition: background-color 0.3s; /* Smooth transition */
+    font-weight: bold; /* Bold text for button */
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add some leaf imagery as a background (optional) */
+.container::before {
+    content: '';
+    background-image: url('path/to/leaf-pattern.png'); /* Add a leaf pattern image here */
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1; /* Slightly visible background */
+    border-radius: 12px;
+    z-index: -1; /* Send to back */
+}
