@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* Translucent green header */
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Translucent green */
+    position: relative;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.header-plant {
+    background-image: url('leaf-pattern.png'); /* Plant pattern */
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+/* Main content section with background image */
+.main-content {
+    background-image: url('bg1.webp'); /* Add your plant-based background image */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    height: calc(100vh - 160px); /* Fill remaining space after the header */
+}
+
+/* Features styling */
+.features-wrapper {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    animation: scroll 30s linear infinite; /* Continuous scroll animation */
+}
+
+.feature {
+    min-width: 240px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.feature h2 {
+    font-size: 1.4rem;
+    color: #444;
+    margin-top: 15px;
+}
+a.feature {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the text color the same */
+    display: inline-block; /* Make the anchor behave like a block element */
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Moves through both sets of features */
+    }
+}
+
+/* Pausing animation on hover */
+.features:hover {
+    animation-play-state: paused;
+}
+
+/* Adding background pattern to body */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('background-pattern.png');
+    opacity: 0.05;
+    z-index: -1;
+}
