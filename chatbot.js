@@ -3,33 +3,33 @@ const chatbox = document.getElementById('chatbox');
 let selectedQuestion = null;
 
 const questions = [
-  "What is JavaScript?",
-  "How does CSS work?",
-  "What is HTML?"
+  "What are the best plants for beginners?",
+  "How often should I water my plants?",
+  "What type of soil is best for indoor plants?"
 ];
 
 const followUpQuestions = {
-  "What is JavaScript?": [
-    "What is a variable in JavaScript?",
-    "How do functions work in JavaScript?"
+  "What are the best plants for beginners?": [
+    "What is a good indoor plant?",
+    "Which plants are low-maintenance?"
   ],
-  "How does CSS work?": [
-    "What are CSS selectors?",
-    "How do you style elements in CSS?"
+  "How often should I water my plants?": [
+    "How can I tell if a plant needs water?",
+    "What is overwatering?"
   ],
-  "What is HTML?": [
-    "What are HTML tags?",
-    "How do you structure a webpage with HTML?"
+  "What type of soil is best for indoor plants?": [
+    "What is potting soil?",
+    "Can I use garden soil for indoor plants?"
   ]
 };
 
 const answers = {
-  "What is a variable in JavaScript?": "A variable in JavaScript is a container for storing data values.",
-  "How do functions work in JavaScript?": "Functions in JavaScript are blocks of code designed to perform a task and are executed when called.",
-  "What are CSS selectors?": "CSS selectors are patterns used to select the elements you want to style.",
-  "How do you style elements in CSS?": "You style elements in CSS by applying properties like color, font-size, and margin.",
-  "What are HTML tags?": "HTML tags are the building blocks of HTML, used to structure content on a webpage.",
-  "How do you structure a webpage with HTML?": "A webpage is structured with HTML using a combination of elements like headings, paragraphs, and divs."
+  "What is a good indoor plant?": "A good indoor plant for beginners is a snake plant or a pothos, as they are low-maintenance and tolerant of neglect.",
+  "Which plants are low-maintenance?": "Low-maintenance plants include succulents, peace lilies, and ZZ plants.",
+  "How can I tell if a plant needs water?": "You can check if the top inch of soil is dry; if it is, it's time to water your plant.",
+  "What is overwatering?": "Overwatering is when a plant receives too much water, which can lead to root rot and other problems.",
+  "What is potting soil?": "Potting soil is a soil mix specifically designed for potted plants, providing good drainage and nutrients.",
+  "Can I use garden soil for indoor plants?": "It is not recommended to use garden soil for indoor plants, as it may contain pests and not provide adequate drainage."
 };
 
 // Initial greeting and first bubble for main questions
@@ -106,3 +106,4 @@ function removePreviousBubbles() {
 
 // Start the chatbot
 initChatbot();
+
