@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% opacity for increased translucency */
+    padding: 20px 0;
+    z-index: 1000;
+    position: relative;
+    backdrop-filter: blur(10px); /* Keep the blur effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Center align the navigation items */
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+}
+
+.features-dropdown:hover .features-list {
+    display: block;
+}
+
+.features-list {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.features-list li {
+    width: 100%;
+}
+
+.features-list li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+}
+
+.features-list li a:hover {
+    background-color: #388E3C;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    padding: 100px 20px 50px; /* Increased top padding for better spacing */
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 4rem; /* Larger font size for a more striking look */
+    margin-bottom: 20px;
+    font-weight: 800; /* Use a heavier font weight */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* More pronounced shadow for depth */
+    letter-spacing: 1.5px; /* Increased letter spacing for elegance */
+    text-transform: capitalize; /* Capitalize each word for a sophisticated touch */
+    line-height: 1.1; /* Tighter line height for a modern feel */
+    color: #a6ff40; /* White color for contrast against the background */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+h1:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    color: #ffffff; /* Change color on hover for added interest */
+}
+
+p {
+    font-size: 1.6rem; /* Slightly larger font size */
+    margin-bottom: 30px; /* Spacing below the paragraph */
+    max-width: 600px; /* Limit width for better readability */
+    margin-left: auto; /* Center align the paragraph */
+    margin-right: auto; /* Center align the paragraph */
+    color: rgba(255, 255, 255, 0.9); /* Lighter color for contrast */
+    line-height: 1.6; /* Improve spacing between lines */
+    opacity: 0.9; /* Slight transparency for a softer look */
+}
+
+
+
+.signup-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 35px; /* Increased padding for a more button-like feel */
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger font size */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600; /* Semi-bold */
+}
+
+.signup-btn:hover {
+    background-color: #388E3C;
+    transform: translateY(-3px);
+}
